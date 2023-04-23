@@ -32,6 +32,7 @@ const MovieDetails = () => {
             <button onClick={handleClick} style={{width: 80, height: 30, borderRadius: 8, backgroundColor: "#FA7800", color: "#f5f5f5", border: "none"}}><span style={{fontSize: 14}}>Go back</span></button>
             {movie && <PageTitle text={movie.title} />}
             {loader && <p>Loading...</p>}
+            {error && <div>{error}</div>}
             {movie && (
                 <div style={{display: "flex", gap: 48}}>
                     <div>
