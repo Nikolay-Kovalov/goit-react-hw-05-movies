@@ -21,6 +21,7 @@ export const CardWrapper = styled.li`
     inset rgba(255, 255, 255, 0.9) 3px 3px 8px,
     rgba(0, 0, 0, 0.8) 3px 3px 8px -3px;
   overflow: hidden;
+  padding-bottom: 8px;
   
 
   > a {
@@ -34,6 +35,7 @@ export const FilmtName = styled.h3`
   margin-bottom: 0;
   color: #F6F5F5;
   font-size: 16px;
+  text-align: center;
 
 
 `;
