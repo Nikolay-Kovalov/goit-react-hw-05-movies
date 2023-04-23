@@ -21,7 +21,7 @@ export const CardWrapper = styled.li`
     inset rgba(255, 255, 255, 0.9) 3px 3px 8px,
     rgba(0, 0, 0, 0.8) 3px 3px 8px -3px;
   overflow: hidden;
-  padding-bottom: 8px;
+  padding-bottom: 8px; 
   
 
   > a {
