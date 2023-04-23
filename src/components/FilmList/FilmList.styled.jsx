@@ -5,15 +5,22 @@ export const Container = styled.ul`
   flex-wrap: wrap;
   // grid-template-columns: repeat(auto-fit, 200px);
   gap: 16px;
+  justify-content: center;
+  padding-left: 0;
   padding-bottom: 24px;
 `;
 
 export const CardWrapper = styled.li`
-  border: 1px solid black;
+
   border-radius: 4px;
   list-style: none;
   max-width: 240px;
   background-color: #FA7800;
+    border-radius: 5px;
+  box-shadow: inset rgba(0, 0, 0, 0.5) -3px -3px 8px,
+    inset rgba(255, 255, 255, 0.9) 3px 3px 8px,
+    rgba(0, 0, 0, 0.8) 3px 3px 8px -3px;
+  overflow: hidden;
   
 
   > a {
@@ -32,11 +39,14 @@ export const FilmtName = styled.h3`
 `;
 
 export const Image = styled.img`
-width: 240px;
-height: 360px;
+width: 100%;
+min-height: 360px;
+object-fit: cover;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-::hover {
-  cursor: pointer;
+:hover {
+
+  transform: scale(1.03);
 
 }
 `
