@@ -1,6 +1,6 @@
 import { PageTitle } from "components/PageTitle/PageTitle";
 import { fetchMoviesDetails } from "filmApi";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useState } from "react";
 import {  NavLink, Outlet, useLocation, useNavigate, useParams } from "react-router-dom"
 
@@ -56,8 +56,9 @@ const MovieDetails = () => {
             <NavLink to={`/movies/${id}/cast`} state={location.state}>
                 <p style={{ color: "#f5f5f5" }}>Cast</p>
             </NavLink>
-            <hr />
-            <Outlet /></div>
+                <hr />
+                <Suspense fallback={<div>Loading...</div>}>
+            <Outlet /></Suspense></div>
    </main>
     )
 }
