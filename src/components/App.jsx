@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,Navigate } from "react-router-dom";
 import { addBackToTop } from 'vanilla-back-to-top';
 
 const Home = lazy(() => import('../pages/Home'));
@@ -19,7 +19,10 @@ export const App = () => {
     })
   },[])
   return (
-    <>    <Routes>
+    <>
+
+      <Routes>
+
         <Route path="/" element={<SharedLayout/>}>
         <Route index element={<Home />} />
         <Route path="/movies" element={<Movies />} />
@@ -27,8 +30,9 @@ export const App = () => {
           <Route path="/movies/:id/cast" element={<Cast />} />
           <Route path="/movies/:id/reviews" element={<Reviews/>} />    
           </Route>
-          <Route path="*" element={<Home />} />
-      </Route>
+          <Route path="*" element={<Navigate to="/" replace />}/>
+          </Route>
+     
     </Routes>
     </>
   
