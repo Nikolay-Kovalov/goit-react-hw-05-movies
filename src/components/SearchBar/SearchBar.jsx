@@ -3,8 +3,6 @@ import { Button, ButtonName, Form, Input } from "./SearchBar.styled";
 import PropTypes from 'prop-types';
 
 
-
-
 export const SearchBar = ({ onSearch }) => {
 
     const [querry, setQuerry] = useState('');
@@ -16,10 +14,7 @@ export const SearchBar = ({ onSearch }) => {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         if (querry.trim() === '') {
-            // alert('Enter film title');
- 
-    
-
+            alert('Enter film name');
         }
         onSearch(querry);
         setQuerry('')
@@ -33,13 +28,13 @@ export const SearchBar = ({ onSearch }) => {
                     value={querry}
                     autoComplete='off'
                     autoFocus
-        
-                    placeholder="Search..." 
+                    placeholder="Search..."
                     onChange={handlesearch} />
                 <Button type="submit"><ButtonName>Search</ButtonName></Button>
-                
+
             </Form>
-          </>
+
+        </>
     )
 }
 
